@@ -29,7 +29,7 @@ ptrContent.on('refresh', function (e) {
     // 模拟2s的加载过程
     setTimeout(function () {
     	
-    	/*myApp.pullToRefreshDone();*/
+    	myApp.pullToRefreshDone();
     }, 2000);
 
 });
