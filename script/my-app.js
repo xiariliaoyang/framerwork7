@@ -18,3 +18,18 @@ myApp.onPageInit('about', function (page) {
   myApp.alert("进入about页面");
   
 })
+
+
+//下拉刷新
+
+var ptrContent = $$('.pull-to-refresh-content');
+ 
+// 添加'refresh'监听器
+ptrContent.on('refresh', function (e) {
+    // 模拟2s的加载过程
+    setTimeout(function () {
+    	
+    	/*myApp.pullToRefreshDone();*/
+    }, 2000);
+
+});
