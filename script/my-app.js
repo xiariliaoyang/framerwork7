@@ -15,7 +15,7 @@ var mainView = myApp.addView('.view-main', {
 // Option 1. Using page callback for page (for "about" page in this case) (recommended way):
 myApp.onPageInit('about', function (page) {
   // Do something here for "about" page
-  myApp.alert("进入about页面");
+  myApp.closePanel();
   
 })
 
@@ -28,8 +28,13 @@ var ptrContent = $$('.pull-to-refresh-content');
 ptrContent.on('refresh', function (e) {
     // 模拟2s的加载过程
     setTimeout(function () {
-    	
-    	/*myApp.pullToRefreshDone();*/
+    	myApp.pullToRefreshDone();
     }, 2000);
 
 });
+
+//登录框
+
+$$(".list-button").on("click",function(){
+	myApp.closeModal(".login-screen");
+})
