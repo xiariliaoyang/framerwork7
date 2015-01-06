@@ -17,12 +17,28 @@ myApp.onPageInit('about', function(page) {
 
 //box page
 myApp.onPageInit('box', function(page) {
-    var title = page.query.title;
-    //$$(".box-title").html(title);
-    $$.getJSON('http://meiriyiwen.com/json/random', function(data) {
-        $$('.box-title').html(data.title);
-        $$('.box-content').html(data.content);
-    })
+    var name = page.query.name;
+        num = page.query.num;
+
+    $$('.box-title').text(name);
+
+    var arr = new Array();
+
+    for (var i = 1; i <= num*num; i++) {
+        var windowwidth = $$(".box-content").width();
+        alert(windowwidth);
+        $$("#box-content").append("<a class='textbox' width='"+ windowwidth/num+"px' data-text='正常人'>"+ i +"</a>");
+        arr.push(i);
+    };
+
+    var randomarray = _.sample(arr, 3);
+    //alert(randomarray);
+    for(var i=0;i<randomarray.length;i++){
+        //alert(randomarray[i]);
+        $$("#box-content .textbox").eq(randomarray[i]).text('some text');
+    }
+
+
 });
 
 
