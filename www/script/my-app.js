@@ -23,9 +23,11 @@ var mainView = myApp.addView('.view-main', {
 // Now we need to run the code that will be executed only for About page.
 
 // Option 1. Using page callback for page (for "about" page in this case) (recommended way):
-myApp.onPageInit('about', function(page) {
-    // Do something here for "about" page
-    myApp.closePanel();
+
+myApp.onPageInit('about', function (page) {
+  // Do something here for "about" page
+  myApp.closePanel();
+  
 })
 
 
@@ -36,10 +38,15 @@ var ptrContent = $$('.pull-to-refresh-content');
 // 添加'refresh'监听器
 ptrContent.on('refresh', function(e) {
     // 模拟2s的加载过程
-    setTimeout(function() {
 
-        myApp.pullToRefreshDone();
-        myApp.alert("刷新完成！","你妹啊");
+    setTimeout(function () {
+    	myApp.pullToRefreshDone();
     }, 2000);
 
 });
+
+//登录框
+
+$$(".list-button").on("click",function(){
+	myApp.closeModal(".login-screen");
+})
