@@ -1,0 +1,12 @@
+.list-button{
+	background: rgb(64, 166, 255);
+	color: #fff !important;
+}
+.textbox{
+	background: rgb(64, 166, 255);
+	height:100px;
+	margin:0 0 20px 0;
+	text-align: center;
+	line-height: 100px;
+	color:#fff;
+}
