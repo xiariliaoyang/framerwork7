@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <title>猜二逼</title>
+    <title>首页</title>
     <link rel="stylesheet" href="css/framework7.min.css">
     <link rel="stylesheet" type="text/css" href="css/my-app.css">
 </head>
@@ -31,11 +31,11 @@
             <!-- Top Navbar-->
             <div class="navbar">
                 <div class="navbar-inner">
-                    <div class="left">
+                    <!-- <div class="left">
                         <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
-                    </div>
+                    </div> -->
                     <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
-                    <div class="center sliding">首页</div>
+                    <div class="center sliding">脑残难度</div>
                 </div>
             </div>
             <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
@@ -53,8 +53,11 @@
                         <div class="content-block">
                             <div class="row">
                                 <a class="col-50 textbox" href="box.html?name=2x2&num=2">2x2</a>
+                                <a class="col-50 textbox" href="box.html?name=3x3&num=3">3x3</a>
                                 <a class="col-50 textbox" href="box.html?name=4x4&num=4">4x4</a>
                                 <a class="col-50 textbox" href="box.html?name=6x6&num=6">6x6</a>
+                                <a class="col-50 textbox" href="box.html?name=10x10&num=10">10x10</a>
+                                <a class="col-50 textbox" href="box.html?name=50x50&num=50">50x50</a>
                             </div>
                             
                         </div>
@@ -80,23 +83,15 @@
             <div class="view">
                 <div class="page">
                     <div class="page-content login-screen-content">
-                        <div class="login-screen-title">App name</div>
+                        <div class="login-screen-title">选择难度</div>
                         <form>
                             <div class="list-block">
                                 <ul>
                                     <li class="item-content">
                                         <div class="item-inner">
-                                            <div class="item-title label">用户名</div>
+                                            <div class="item-title label">病人姓名</div>
                                             <div class="item-input">
                                                 <input type="text" name="username" placeholder="Your username">
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="item-content">
-                                        <div class="item-inner">
-                                            <div class="item-title label">密码</div>
-                                            <div class="item-input">
-                                                <input type="password" name="password" placeholder="Your password">
                                             </div>
                                         </div>
                                     </li>
@@ -105,12 +100,13 @@
                             <div class="list-block">
                                 <ul>
                                     <li>
-                                        <a href="#" class="item-link list-button">登录</a>
+                                        <a href="#" class="item-link list-button">开始测试</a>
                                     </li>
                                 </ul>
-                                <div class="list-block-label">
+                                <!--
+                                    <div class="list-block-label">
                                     <a class="" href="#">忘记密码？</a><a href="#">立即注册</a>
-                                </div>
+                                </div> -->
                             </div>
                         </form>
                     </div>
